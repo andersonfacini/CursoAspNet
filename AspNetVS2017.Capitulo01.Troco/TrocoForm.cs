@@ -7,6 +7,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
+using System.Globalization;
 
 namespace AspNetVS2017.Capitulo01.Troco
 {
@@ -17,9 +18,13 @@ namespace AspNetVS2017.Capitulo01.Troco
             InitializeComponent();
         }
 
-        private void textBox1_TextChanged(object sender, EventArgs e)
+        private void calcularButton_Click(object sender, EventArgs e)
         {
+            decimal valorCompra = Convert.ToDecimal(valorCompraTextBox.Text);
+            decimal valorPago = Convert.ToDecimal(valorPagoTextBox.Text);
+            decimal troco = valorPago - valorCompra;
 
+            trocoTextBox.Text = troco.ToString("C");
         }
     }
 }
