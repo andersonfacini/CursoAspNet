@@ -26,7 +26,7 @@ namespace AspNetVS2017.Capitulo01.Troco
 
             trocoTextBox.Text = troco.ToString("C");
 
-            //ToDo: refatorar para usar vetor e for.
+            //ToDo: refatorar para usar vetor e for..
 
             int moedas100 = (int)troco;
 
